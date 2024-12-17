@@ -1,27 +1,27 @@
-Project Structure
-graphql
-Копировать код
-client/
-  ├── public/                 # Static public files
-  ├── src/
-      ├── components/         # Reusable UI components (Navbar, LoginForm, etc.)
-      ├── pages/              # Application pages (Home, AdminPanel, Login, etc.)
-      ├── services/           # API service files (authService, productService)
-      ├── App.js              # Main application entry point
-      ├── index.js            # React entry point
-      └── styles/             # Global styles (if needed)
-1. Install Required Packages
-Run the following command to install React and required dependencies:
+// Project Structure
+// graphql
+
+// client/
+//   ├── public/                 # Static public files
+//   ├── src/
+//       ├── components/         # Reusable UI components (Navbar, LoginForm, etc.)
+//       ├── pages/              # Application pages (Home, AdminPanel, Login, etc.)
+//       ├── services/           # API service files (authService, productService)
+//       ├── App.js              # Main application entry point
+//       ├── index.js            # React entry point
+//       └── styles/             # Global styles (if needed)
+// 1. Install Required Packages
+// Run the following command to install React and required dependencies:
 
 bash
-Копировать код
-npx create-react-app client
-cd client
-npm install axios react-router-dom @mui/material @emotion/react @emotion/styled
-2. File Implementations
+
+// npx create-react-app client
+// cd client
+// npm install axios react-router-dom @mui/material @emotion/react @emotion/styled
+// 2. File Implementations
 src/index.js
 javascript
-Копировать код
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
@@ -35,7 +35,7 @@ root.render(
 );
 src/App.js
 javascript
-Копировать код
+
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
@@ -59,9 +59,11 @@ function App() {
 }
 
 export default App;
+
+
 src/components/Navbar.js
 javascript
-Копировать код
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { AppBar, Toolbar, Button } from '@mui/material';
@@ -81,7 +83,7 @@ const Navbar = () => {
 export default Navbar;
 src/pages/HomePage.js
 javascript
-Копировать код
+
 import React, { useEffect, useState } from 'react';
 import ProductList from '../components/ProductList';
 import productService from '../services/productService';
@@ -104,7 +106,7 @@ const HomePage = () => {
 export default HomePage;
 src/pages/LoginPage.js
 javascript
-Копировать код
+
 import React, { useState } from 'react';
 import authService from '../services/authService';
 
@@ -145,7 +147,7 @@ const LoginPage = () => {
 export default LoginPage;
 src/pages/AdminPanel.js
 javascript
-Копировать код
+
 import React, { useEffect, useState } from 'react';
 import productService from '../services/productService';
 
@@ -172,7 +174,7 @@ const AdminPanel = () => {
 export default AdminPanel;
 src/components/ProductList.js
 javascript
-Копировать код
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -191,7 +193,7 @@ const ProductList = ({ products }) => {
 export default ProductList;
 src/pages/ProductPage.js
 javascript
-Копировать код
+
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import productService from '../services/productService';
@@ -223,7 +225,7 @@ export default ProductPage;
 3. Services (API Requests)
 src/services/authService.js
 javascript
-Копировать код
+
 import axios from 'axios';
 
 const API_URL = 'http://localhost:5000/api/auth';
@@ -237,7 +239,7 @@ export default {
 };
 src/services/productService.js
 javascript
-Копировать код
+
 import axios from 'axios';
 
 const API_URL = 'http://localhost:5000/api/products';
