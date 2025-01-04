@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --text-color: #3e3e3e;
+  --prmary-color: #222222;
+  --card-bg-color: #f5f5f5;
+  --main-color: #fff;
+  --bg-header: #f1f1f1;
+  --gray: #797979;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 1.2rem;
+}
+
+body {
+  background-image: url(../../public/bg-hero-two.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
