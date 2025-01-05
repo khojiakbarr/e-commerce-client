@@ -23,7 +23,7 @@ type Header = {
 };
 
 export default function Header({
-  mode = "white",
+  mode = "transparentWhite",
   garantias = true,
   position = "absolute",
 }: Header) {
@@ -66,12 +66,12 @@ export default function Header({
     <>
       {garantias && (
         <div className={styles.topNav}>
-          <button>
+          <button className="my-prev-button">
             <ChevronLeft size={22} />
           </button>
           <h1>Гарантия лучшей цены</h1>
 
-          <button>
+          <button className="my-next-button">
             <ChevronRight size={22} />
           </button>
         </div>
@@ -93,15 +93,13 @@ export default function Header({
               </button>
             </div>
 
-            <nav>
-              <ul className={styles.categories}>
-                {categories.map((category, index) => (
-                  <li key={index}>
-                    <Link href={`${category.toLowerCase()}`}>{category}</Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
+            <ul className={styles.categories}>
+              {categories.map((category, index) => (
+                <li key={index}>
+                  <Link href={`${category.toLowerCase()}`}>{category}</Link>
+                </li>
+              ))}
+            </ul>
 
             <Link href={"/"} rel="preload" className={styles.logo}>
               <Image
