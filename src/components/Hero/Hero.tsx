@@ -7,7 +7,7 @@ import bgThree from "../../../public/bg-hero-three.png";
 import bgFor from "../../../public/bg-hero-for.png";
 import bgFive from "../../../public/bg-hero-five.png";
 
-export const images = [bgOne, bgTwo, bgThree, bgFor, bgFive];
+export const images = [bgThree, bgThree, bgThree, bgFor, bgFive];
 const Hero = () => {
   return (
     <section className={styles.hero}>

@@ -31,6 +31,7 @@ $base: 16;
 
 .header {
   padding: px-to-rem(10) 0;
+  z-index: 99;
 
   .wrapper {
     display: flex;
@@ -107,7 +108,7 @@ $base: 16;
   display: flex;
   transform: translateX(0%);
   transition: all 0.3s ease;
-  z-index: 1;
+  z-index: 999;
 }
 
 .rightSide {
@@ -139,4 +140,5 @@ $base: 16;
   width: 100vw;
   height: 100vh;
   background: #0000002c;
+  z-index: 999;
 }
